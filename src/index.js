@@ -14,8 +14,12 @@ export default class ExampleComponent extends Component {
     } = this.props
 
     return (
-      <div className={styles.test}>
-        Example Component: {text}
+      <div className="modal">
+        <div className="modal-background"></div>
+        <div className="modal-content">
+          <p>{text}</p>
+        </div>
+        <button className="modal-close is-large" aria-label="close"></button>
       </div>
     )
   }
