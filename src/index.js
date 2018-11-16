@@ -3,9 +3,14 @@ import PropTypes from 'prop-types'
 
 import styles from './styles.css'
 
-export default class ExampleComponent extends Component {
+export default class ProductWidget extends Component {
   static propTypes = {
     text: PropTypes.string
+  }
+  
+  toggleModal = () => {
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('is-active')
   }
 
   render() {
@@ -19,7 +24,7 @@ export default class ExampleComponent extends Component {
         <div className="modal-content">
           <p>{text}</p>
         </div>
-        <button className="modal-close is-large" aria-label="close"></button>
+        <button className="modal-close is-large" aria-label="close" onClick={this.toggleModal}></button>
       </div>
     )
   }
