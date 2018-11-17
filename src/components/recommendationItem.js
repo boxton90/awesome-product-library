@@ -5,7 +5,7 @@ export default (props) => {
         <article className="media">
             <div className="media-left">
                 <figure className="image is-128x128">
-                    <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"></img>
+                    <img src="https://source.unsplash.com/random/128x128" alt="Image"></img>
                 </figure>
             </div>
             <div className="media-content">
@@ -15,6 +15,7 @@ export default (props) => {
                         <br></br>
                         {props.desc}
                   </p>
+                  <a className="button is-primary is-outlined">Buy</a>
                 </div>
             </div>
         </article>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import ProductWidget from 'awesome-product-library'
+import 'awesome-product-library/src/styles.css';
 
 export default class App extends Component {
   

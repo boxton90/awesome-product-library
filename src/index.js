@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Product from './components/product'
+import RecommendationItem from './components/recommendationItem'
+import ProductItem from './components/productItem'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 import 'react-tabs/style/react-tabs.css';
@@ -32,15 +33,15 @@ export default class ProductWidget extends Component {
                 <Tab selectedClassName="is-active"><a>Recommendations</a></Tab>
               </TabList>
               <TabPanel>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
+                <ProductItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></ProductItem>
               </TabPanel>
               <TabPanel>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
-                <Product title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></Product>
+                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
+                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
+                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
+                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
+                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
+                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
               </TabPanel>
             </Tabs>
           </div>
