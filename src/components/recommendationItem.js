@@ -5,7 +5,7 @@ export default (props) => {
         <article className="media">
             <div className="media-left">
                 <figure className="image is-128x128">
-                    <img src="https://source.unsplash.com/random/128x128" alt="Image"></img>
+                    <img src={props.img} alt={props.title}></img>
                 </figure>
             </div>
             <div className="media-content">

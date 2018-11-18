@@ -29,11 +29,11 @@ export default class ProductWidget extends Component {
                 <Tab selectedClassName="is-active"><a>Recommendations</a></Tab>
               </TabList>
               <TabPanel>
-                <ProductItem title={this.props.productData.title} desc={this.props.productData.desc}></ProductItem>
+                <ProductItem title={this.props.productData.title} desc={this.props.productData.desc} img={this.props.productData.img}></ProductItem>
               </TabPanel>
               <TabPanel>
                 {this.props.recommendationsData.recommendations.map(recommendation => {
-                  return (<RecommendationItem title={recommendation.title} desc={recommendation.desc}></RecommendationItem>)
+                  return (<RecommendationItem title={recommendation.title} desc={recommendation.desc} img={recommendation.img}></RecommendationItem>)
                 })}
               </TabPanel>
             </Tabs>
