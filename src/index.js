@@ -32,8 +32,8 @@ export default class ProductWidget extends Component {
                 <ProductItem title={this.props.productData.title} desc={this.props.productData.desc} img={this.props.productData.img}></ProductItem>
               </TabPanel>
               <TabPanel>
-                {this.props.recommendationsData.recommendations.map(recommendation => {
-                  return (<RecommendationItem title={recommendation.title} desc={recommendation.desc} img={recommendation.img}></RecommendationItem>)
+                {this.props.recommendationsData.recommendations.map((recommendation,index) => {
+                  return (<RecommendationItem title={recommendation.title} desc={recommendation.desc} img={recommendation.img} key={index}></RecommendationItem>)
                 })}
               </TabPanel>
             </Tabs>
