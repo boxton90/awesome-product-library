@@ -18,10 +18,6 @@ export default class ProductWidget extends Component {
   }
 
   render() {
-    const {
-      text
-    } = this.props
-
     return (
       <div className="modal">
         <div className="modal-background" onClick={this.toggleModal}></div>
@@ -33,15 +29,12 @@ export default class ProductWidget extends Component {
                 <Tab selectedClassName="is-active"><a>Recommendations</a></Tab>
               </TabList>
               <TabPanel>
-                <ProductItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></ProductItem>
+                <ProductItem title={this.props.productData.title} desc={this.props.productData.desc}></ProductItem>
               </TabPanel>
               <TabPanel>
-                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
-                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
-                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
-                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
-                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
-                <RecommendationItem title="Product title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis."></RecommendationItem>
+                {this.props.recommendationsData.recommendations.map(recommendation => {
+                  return (<RecommendationItem title={recommendation.title} desc={recommendation.desc}></RecommendationItem>)
+                })}
               </TabPanel>
             </Tabs>
           </div>
