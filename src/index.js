@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import RecommendationItem from './components/recommendationItem'
 import ProductItem from './components/productItem'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
@@ -27,9 +26,11 @@ export default class ProductWidget extends Component {
   /* OnkeyDown event that handle right and left arrow keys pressing to switch between tabs */
   onKeyDown(event) {
     switch (event.keyCode) {
+      // Right arrow key case
       case 39:
         this.state.selectedTabIndex < (this.state.numberTabs - 1) ? this.increaseSelectedTabIndex() : null
       break
+      // Left arrow key case
       case 37:
         this.state.selectedTabIndex > 0 ? this.dicreaseSelectedTabIndex() : null
       break
