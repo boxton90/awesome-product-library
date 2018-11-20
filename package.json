@@ -59,6 +59,7 @@
     "dist"
   ],
   "dependencies": {
+    "bulma": "^0.7.2",
     "react-tabs": "^2.3.0"
   }
 }

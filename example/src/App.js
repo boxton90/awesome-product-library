@@ -25,6 +25,7 @@ export default class App extends Component {
     }
   }
 
+  /* Method to trigger toggle (open/close) widget modal */
   onClick = () => {
     this.productWidget.current.toggleModal()
   }
