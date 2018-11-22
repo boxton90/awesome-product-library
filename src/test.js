@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import ProductWidget from './'
 
-describe('ExampleComponent', () => {
+describe('ProductWidget', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(ProductWidget).toBeTruthy()
   })
 })
