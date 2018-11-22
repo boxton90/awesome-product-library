@@ -13,6 +13,7 @@ export default class ProductWidget extends Component {
       selectedTabIndex: 0,
       numberTabs : 2}
     this.onKeyDown = this.onKeyDown.bind(this)
+    this.modal = React.createRef()
   }
 
   componentDidMount() {
@@ -49,13 +50,12 @@ export default class ProductWidget extends Component {
 
   /* Method that toggle (open/close) widget modal */
   toggleModal = () => {
-    const modal = document.querySelector('.modal')
-    modal.classList.toggle('is-active')
+    this.modal.current.classList.toggle('is-active')
   }
 
   render() {
     return (
-      <div className="modal">
+      <div className="modal" ref={this.modal}>
         <div className="modal-background" onClick={this.toggleModal}></div>
         <div className="modal-content">
           <div className="box">
